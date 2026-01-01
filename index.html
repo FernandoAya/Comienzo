@@ -2,12 +2,16 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Para vos 🤍</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <title>Un nuevo comienzo 🤍</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
-            height: 100vh;
+            min-height: 100vh;
             background: linear-gradient(135deg, #f6f1ee, #e8dcd5);
             display: flex;
             justify-content: center;
@@ -17,51 +21,142 @@
         }
 
         .container {
-            max-width: 700px;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.85);
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 800px;
+            padding: 30px 26px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 22px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
             text-align: center;
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 32px;
-            margin-bottom: 25px;
+            font-size: 30px;
+            margin-bottom: 24px;
         }
 
         p {
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 18px;
+            font-size: 18px;
+            line-height: 1.9;
+            margin-bottom: 22px;
         }
 
         .firma {
             margin-top: 30px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .bloqueado h1 {
+            font-size: 32px;
+        }
+
+        .bloqueado p {
+            font-size: 20px;
+        }
+
+        .contador {
+            margin-top: 20px;
             font-size: 18px;
-            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 17px;
+            }
+
+            .firma {
+                font-size: 19px;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
+<!-- CONTENIDO BLOQUEADO -->
+<div class="container bloqueado" id="bloqueado">
+    <h1>✨</h1>
+    <p>Mi amor, es un mensaje,<br>que te espera en unos minutos para que lo leas.<br>Si querés ir contando los segundos mi ansiosa, toxi♥</p>
+    <div class="contador" id="contador"></div>
+</div>
+
+<!-- CONTENIDO PRINCIPAL -->
+<div class="container" id="contenido" style="display:none;">
     <h1>Un nuevo comienzo</h1>
 
-    <p>Este nuevo comienzo me encuentra pensándote. Pensando en todo lo que sos y en lo que despertás en mí. El año pasado me regaló el milagro de conocerte, y este año te elijo sin dudas: te elijo como mi prioridad, como mi calma, como el amor que quiero cuidar.</p>
+    <p>
+        Este nuevo comienzo me encuentra pensándote. Pensando en todo lo que sos y en lo que despertás en mí.
+        El año pasado me regaló el milagro de conocerte, y este año te elijo sin dudas:
+        te elijo como mi prioridad, como mi calma, como el amor que quiero cuidar.
+    </p>
 
-    <p>Quiero amarte de una forma simple y profunda, de esas que no necesitan explicación. Quiero que tu corazón se sienta seguro, abrazado, acompañado… y feliz. Y quiero que sepas que todo lo que es parte de tu vida, especialmente tus hijos, también lo abrazo con respeto, cuidado y la importancia que merecen. Que sepas que acá hay alguien que cree en vos, que te admira y que te ama tal como sos.</p>
+    <p>
+        Quiero amarte de una forma simple y profunda, de esas que no necesitan explicación.
+        Quiero que tu corazón se sienta seguro, abrazado, acompañado… y feliz.
+        Y quiero que sepas que todo lo que es parte de tu vida, especialmente tus hijos,
+        también lo abrazo con respeto, cuidado y la importancia que merecen.
+        Que sepas que acá hay alguien que cree en vos, que te admira y que te ama tal como sos.
+    </p>
 
-    <p>Te quiero y te amo. Me hacés bien de una manera que no sabía que existía. Gracias por llegar a mi vida y quedarte. Deseo caminar a tu lado, sostenerte cuando lo necesites y celebrar cada paso, cerca o lejos, pero siempre juntos. Sin apuros, disfrutando lo pequeño, que es donde vive lo más verdadero.</p>
+    <p>
+        Te quiero y te amo. Me hacés bien de una manera que no sabía que existía.
+        Gracias por llegar a mi vida y quedarte.
+        Deseo caminar a tu lado, sostenerte cuando lo necesites y celebrar cada paso,
+        cerca o lejos, pero siempre juntos.
+        Sin apuros, disfrutando lo pequeño, que es donde vive lo más verdadero.
+    </p>
 
-    <p>Este es nuestro comienzo. Una historia que quiero vivir con vos, sin miedo, con amor y con alegría. Sanar, reír, crecer y amarnos, día a día.</p>
+    <p>
+        Este es nuestro comienzo. Una historia que quiero vivir con vos,
+        sin miedo, con amor y con alegría.
+        Sanar, reír, crecer y amarnos, día a día.
+    </p>
 
     <div class="firma">
-        Sos mi persona, mi lugar, mi amor. <br>
+        Sos mi persona, mi lugar, mi amor.<br>
         Te quiero infinito 🤍
     </div>
 </div>
+
+<script>
+    /*************************************************
+     * 👉👉👉 ACÁ MODIFICÁS LA FECHA Y HORA 👈👈👈
+     * Formato:
+     * new Date(AÑO, MES, DÍA, HORA, MINUTO, SEGUNDO)
+     * OJO: MES empieza en 0 (enero = 0)
+     *************************************************/
+
+    const fechaObjetivo = new Date(2026, 0, 1, 0, 0, 1);
+    // Ejemplo para probar en 2 minutos:
+    // const fechaObjetivo = new Date(2024, 11, 31, 23, 59, 0);
+
+    function actualizar() {
+        const ahora = new Date();
+        const diferencia = fechaObjetivo - ahora;
+
+        if (diferencia <= 0) {
+            document.getElementById("contenido").style.display = "block";
+            document.getElementById("bloqueado").style.display = "none";
+            return;
+        }
+
+        const horas = Math.floor(diferencia / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+        document.getElementById("contador").innerText =
+            `Faltan ${horas}h ${minutos}m ${segundos}s`;
+    }
+
+    actualizar();
+    setInterval(actualizar, 1000);
+</script>
 
 </body>
 </html>
